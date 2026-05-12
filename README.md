@@ -3,10 +3,7 @@
 ```markdown
 # 🎓 Self-RAG University Course Advisory System
 
-[![Python](https://img.shields.io/badge/Python-3.9+-blue.svg)](https://www.python.org/)
-[![LangGraph](https://img.shields.io/badge/LangGraph-0.2.0-green.svg)](https://langchain-ai.github.io/langgraph/)
-[![Groq](https://img.shields.io/badge/Groq-LLM-orange.svg)](https://groq.com/)
-[![License](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
+
 
 ## 📋 Overview
 
@@ -386,14 +383,4 @@ If you want to add dynamic badges, create a `badges.md` file:
 [![Made with Love](https://img.shields.io/badge/Made%20with-❤️-red.svg)](https://github.com/yourusername)
 ```
 
-The README includes:
-- ✅ Complete project overview
-- ✅ Installation instructions
-- ✅ Usage examples
-- ✅ Architecture diagram
-- ✅ Test results
-- ✅ Troubleshooting guide
-- ✅ Quick reference card
-- ✅ All requirements documentation
 
-Your project now has a professional, comprehensive README! 🎉
