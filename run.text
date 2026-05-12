@@ -1,0 +1,6 @@
+activate the env 
+
+venv\Scripts\activate                                                                                                                           
+                                                                
+
+python self_rag_agent.py --rebuild-kb  

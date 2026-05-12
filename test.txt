@@ -1,0 +1,87 @@
+Test Case 1: No Retrieval Needed (Direct Answer)
+Query: "Hello, can you help me understand what a university credit hour means in general?"
+
+Why: The agent can answer from general knowledge without needing your specific PDFs. Credit hours are a standard concept across all universities.
+
+Alternative queries:
+
+"What's the difference between undergraduate and graduate studies?"
+
+"How does a semester system typically work?"
+
+"What does 'prerequisite' mean in education?"
+
+
+------------------------------------------------
+
+Test Case 2: Retrieval Needed - Documents ARE Relevant
+
+"I want to take AI courses. What math prerequisites do I need?"
+ What courses are required for the CS program?
+"What courses are required for the BBA program?" (from BBA catalog)
+
+
+
+------------------------------------------
+Test Case 3: Retrieval Needed - Documents IRRELEVANT (Trigger Web Search)
+Query: "What is the average starting salary for computer science graduates from MIT?"
+
+
+"Who is the current CEO of Google?"
+"What's the latest research in quantum computing?"
+
+
+
+------------------------------------------------
+
+Test Case 4: Hallucination Check Fails → Regeneration
+Query: "Does the university offer a course in Advanced Quantum Physics?"
+
+Why this triggers hallucination:
+
+Your PDFs (CS, EE, BBA) likely DON'T have Quantum Physics
+
+The agent might be tempted to say "No" or hallucinate a course
+
+The hallucination checker will catch unsupported claims
+
+Forces regeneration until it gives a proper response
+
+Alternative hallucination-inducing queries:
+
+
+"What is the late fee for dropping a course after the 5th week?" (if policy doesn't specify exact week)
+
+"Does the university offer a dual degree with Harvard?" (not in your documents)
+
+"What is the student-to-faculty ratio in the CS department?" (if not explicitly stated)
+
+-------------------------------------------
+
+Test Case 5: Creative Test - Your Own Scenario
+Query: "Compare the prerequisites for CS-210 Computer Networks and CS-301 Artificial Intelligence"
+
+Why it's creative:
+
+Requires retrieving MULTIPLE documents from same source
+
+Requires COMPARISON between two courses
+
+Tests the agent's ability to synthesize information
+
+Both courses EXIST in your CS catalog
+
+Alternative creative queries:
+
+
+
+"If I miss more than 25% of classes, what happens to my grade?"
+"Create a study plan for first-year CS students"
+
+Complete Test Matrix for Your Assignment
+#	Scenario	Query	Expected Behavior
+1	No retrieval	"Hello, can you help me understand what a university credit hour means in general?"	Direct answer, no KB search
+2	Relevant docs	"What are the prerequisites and credit hours for CS-301 Artificial Intelligence?"	Retrieve from CS catalog, show prerequisites
+3	Irrelevant docs (web fallback)	"What is the average starting salary for computer science graduates from MIT?"	Web search fallback, answer from internet
+4	Hallucination → regenerate	"Does the university offer a course in Advanced Quantum Physics?"	Initial generation may hallucinate, checker catches it, regenerates
+5	Creative test	"Compare the prerequisites for CS-210 Computer Networks and CS-301 Artificial Intelligence"	Retrieve both courses, compare requirements
