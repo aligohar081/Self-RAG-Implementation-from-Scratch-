@@ -1,10 +1,6 @@
-# README.md for Self-RAG University Course Advisory System
+# Self-RAG University Course Advisory System
 
 ```markdown
-# 🎓 Self-RAG University Course Advisory System
-
-
-
 ## 📋 Overview
 
 The **Self-RAG University Course Advisory System** is an intelligent agent that helps students get accurate information about courses, prerequisites, credit hours, policies, and faculty at XYZ National University. Unlike traditional chatbots, this agent uses **Self-Reflective Retrieval-Augmented Generation (Self-RAG)** to make intelligent decisions about when to retrieve information, how to evaluate document relevance, and how to verify its own responses.
